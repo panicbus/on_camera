@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scenic49</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta charset='utf-8' />
+  <link href='http://fonts.googleapis.com/css?family=Fascinate|Poller+One|Josefin+Sans:600|Varela+Round' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+ 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-48329636-4', 'scenic49.herokuapp.com');
+    ga('send', 'pageview');
+  </script>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img class="nav_bird" src="assets/bird_on_it.jpg"></a> 
+      <a class="navbar-brand nav_title" href="/">On The Road: <span class="subtitle">The Scenic 49</span></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a class="howitworks_modal" data-toggle="modal" data-target="#howItWorksModal">How To Use This Site</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li id="closeIt" class="dropdown">
+        <% if !@all_checkins %> <!-- to hide the nav dropdown in all_checkins view -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Stations <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a class="drop1" href="#">Station #1</a></li>
+            <li><a class="drop2" href="#">Station #2</a></li>
+            <li><a class="drop3" href="#">Station #3</a></li>
+            <li><a class="drop4" href="#">Station #4</a></li>
+            <li><a class="drop5" href="#">Station #5</a></li>
+            <li><a class="drop6" href="#">Station #6</a></li>
+            <li><a class="drop7" href="#">Station #7</a></li>
+            <li><a class="drop8" href="#">Station #8</a></li>
+            <li><a class="drop9" href="#">Station #9</a></li>
+          </ul>
+          <%end%>
+      <li><%= link_to "All the checkins", "/all_checkins" %></li>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a class="about_modal" data-toggle="modal" data-target="#aboutModal">About</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<%= yield %>
+
+<!-- Modal 1 - How It Works -->
+<div class="modal fade" id="howItWorksModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">How to Use This Site</h4>
+      </div>
+      <div class="modal-body">
+        <p>There are 2 ways to navigate this site when checking in at a Station:</p>
+        <ol>
+          <li>By clicking/tapping on a marker on the map that corresponds to your current location in the City.</li>
+          <li>By selecting the Station from 'The Stations' dropdown in the top nav bar.</li>
+        </ol>
+        <p>Enter your name and comment in the form and hit submit (hit the (?) for a comment tip!). Your check-in will be immediately saved.</p>
+        <p>Upload a photo from your phone or tablet by clicking the 'Choose photo' button, browse to the correct folder and click upload, or take a photo with your camera and click upload.</p>
+        <p><em><b>If you're submitting a photo, ONLY TAP THE SUBMIT BUTTON ONCE. And be patient. Our uploader can take some time, especially if the photo's large.</b></em></p> 
+        <br>
+        <h3>Visiting after the hike is over?</h3>
+        <p>There are 3 ways to navigate the comments on the site:</p>
+        <ol>
+          <li>Via the markers on the map.</li>
+          <li>Via Stations dropdown in the top nav.</li>
+          <li>Via "All the checkins" link just next to it. Filter your results by station!</li>
+        </ol>
+        <p>Thanks for visiting and/or participating in On The Road: The Scenic 49!</p>
+        <p>~ Peter and Chris</p>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 - About -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">The 49 Scenic Project</h4>
+      </div>
+      <div class="modal-body">
+        <p>In <em>On The Road: The Scenic 49</em>, <a href="http://mobileartsplatform.wordpress.com/">MAP</a> artists Peter Foucault and Chris Treggiari will be walking the length of the 49 Mile Scenic Drive in San Francisco over the course of three days, March 13 – 15, 2014. 
+
+        <p>Each day they will set up three different temporary interactive art installations along the route.</p>
+
+        <p>On March 15th at 7pm, once the walk is complete, they will hike into Alter Space Gallery for the opening of <a href="http://microclimatecollective.com/home.html">Wabi/Sabi</a>, a show curated by the MicroCilmate Collective. That evening they will set up a final interactive art project and install the equipment used in the expedition as well as documentation of the project created en-route for a one-month installation in the gallery.</p>
+
+        <p><strong>You can participate in this project too! Choose the neighborhood on the map in which you live, have strong feelings about or close ties too. We want to know your thoughts on what you love about it, what could improve or how it's changing.</strong></p> 
+
+        <p>Once installed at Alter Space Gallery you can continue to add to our map. We want to hear your voice!</p>
+
+        <h3>Tentative schedule:</h3>
+        <ul>
+          <li>Thurday, 3/13: Stations 1, 2 and 3.</li>
+          <li>Friday, 3/14: Stations 4, 5 and 6.</li>
+          <li>Saturday, 3/15: Stations 7, 8 and 9.</li>
+        </ul>
+        <p style="text-align:right">Website created by <a href="http://www.nicocrisafulli.com">Nico Crisafulli</a> and <a href="http://bkahler.github.io/">Bryan Kahler</a>.</p>
+        <p style="text-align:right">49 Mile icon by <a href="http://thegiftprolific.com/">Joshua Coffy</a></p>.
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- comment modal -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content commentModal">
+      <div class="modal-body">
+          <p style="font-size:20px"><b>Please comment on the following two questions:</b></p>
+          <p style="font-size:18px"><li><em>My neighborhood is unique because...</em></li>
+                                    <li><em>How is my neighborhood changing?</em></li></p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+    </div>
+      
+  </div>
+</div>
+
+
+</body>
+</html>

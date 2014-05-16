@@ -1,0 +1,45 @@
+<div class="allcheckins_container">
+    <h1>All the checkins.</h1>
+    <h3>Click on the buttons below to filter the results by Station number.</h3>
+    <br>
+
+  <div class="allCheckins_filter">
+
+    <div id="locations_links">
+      <a href="#" data-filter=".all" class="current all_of_them">ALL OF THEM</a><br><br>
+      <% @locations.each do |location| %>
+        <div class="filter_links">
+          <a href="#" data-filter=".<%= (location.name.gsub(/\s+/,"")).downcase %>"><%= location.name %> </a>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+  <div class="allCheckins">
+
+    <% @all_checkins.each do |checkin| %> <!-- get checkins for "see all" -->
+      <div id="each_one" class= 'all'>
+        <div style="font-size:24px"><%= checkin.name %></div>
+        <%= simple_format(checkin.comment) %>
+        <% if checkin.photo.present? %>
+          <%= image_tag checkin.photo.url(:medium) %><br>
+        <% end %>
+      </div>
+    <%end%>
+    
+
+  	<% @all_checkins.each do |checkin| %> <!-- get checkins for filtered results -->
+  		<div id="each_one" class="<%= (checkin.location.name.gsub(/\s+/,"")).downcase %>">
+  	 		<div style="font-size:24px"><%= checkin.name %></div>
+  	 	  <%= simple_format(checkin.comment) %>
+      	<% if checkin.photo.present? %>
+       		<%= image_tag checkin.photo.url(:medium) %><br>
+      	<% end %>
+   		</div>  
+    <% end %>
+      	
+  </div>
+
+  <a class="back_link" href="/">Back to main map</a>
+</div>

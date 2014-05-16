@@ -1,0 +1,27 @@
+<!-- the display immediately after a checkin -->
+<div id="created_container">
+  <div class="created_container_header">
+    <p class="site1_title">
+       <b>
+         <%= @location.name %>
+       </b>
+    </p>
+    <button id="back_button" type="button" class="btn btn-default btn-sm">Back to map view</button>
+    <p class="site1_desc">
+      <b>
+        <%= @location.description %>
+     	</b>
+    </p>
+  </div>
+  <hr>
+  <br>
+  <div class="site-1">
+    <div class="notice"><%= flash.now[:notice] %></div>
+  	<span style="font-size:24px"><%= @checkin.name %></span><br>
+  	<%= simple_format(@checkin.comment) %><br> <!-- simple_format(..) converts \n to line breaks in html -->
+  	<% if @checkin.photo.present? %>
+  		<%= image_tag @checkin.photo.url(:medium) %>
+  	<% end %>
+    <span style="font-size:12px">&#149;<%= @checkin.created_at.strftime("%b %e, %Y %l:%M %p") %></span><br>
+  </div>
+</div>

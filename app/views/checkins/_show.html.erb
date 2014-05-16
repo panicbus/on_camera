@@ -1,0 +1,31 @@
+<div class="content_header">
+  <p class="site1_title">
+    <b>
+      <%= @location.name %>
+    </b>
+  </p>
+  <button id="back_button" type="button" class="btn btn-default btn-sm">Back to map view</button>
+  <p class="site1_desc">
+    <b>
+      <%= @location.description %>
+    </b>
+  </p>
+  <hr/>
+</div>
+
+<div id="site-1">
+  <%= render 'form' %>
+
+  <br>
+  <% @location.checkins.each do |f| %> 
+    <span style="font-size:25px"><%= f.name %></span><br>
+       <%= simple_format(f.comment) %>
+       <% if f.photo.present? %>
+         <%= image_tag f.photo.url(:medium) %><br>
+       <% end %>
+       <span style="font-size:12px">&#149;<%= f.created_at.strftime("%b %e, %Y %l:%M %p") %></span><br>
+    <br>
+  <% end %>
+</div>
+ 
+ <!-- THIS IS THE SAME AS _form_container.html.erb -->
