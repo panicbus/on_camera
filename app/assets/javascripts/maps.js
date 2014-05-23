@@ -15,7 +15,7 @@ function initialize_map(){
 	if (mq.matches){
 		var	map = new L.mapbox.map('map', 'panicbus.i8mf0iaa').setView([34.104, -118.181], 12); //set map center for desktop size
 	} else {
-		var	map = new L.mapbox.map('map', 'panicbus.i8mf0iaa').setView([34.104, -118.181], 12); //set map center for mobile size
+		var	map = new L.mapbox.map('map', 'panicbus.i8mf0iaa').setView([34.065, -118.304], 11); //set map center for mobile size
 	};
 
 	// var stamenLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'}).addTo(map);
