@@ -19,7 +19,7 @@ html, body {
   height: 100%;
   width: 100%;
   background-color: #ccc;
-  font-family: 'Varela Round', sans-serif;
+  font-family: 'Unica One', sans-serif;
 }
 
 .navbar {
@@ -40,7 +40,7 @@ a:hover {
 }
 
 .navbar-brand {
-	font-family: 'Poller One', cursive;
+	font-family: 'Special Elite', cursive;
 
 }
 
@@ -59,7 +59,9 @@ a:hover {
 	height: auto;
 	float: left;
 	margin: -7px -4px 0px -3px;
+	padding: 3px;
 	border-radius: 3px;
+	background-color: rgba(150,150,150,0.4);
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
@@ -111,11 +113,13 @@ a:hover {
 	font-size: 22px;
 	background-color: rgba(255,255,255,0.4);
 	border-radius: 3px;
-	padding: 0 0 30px 0;
+	padding: 0px 10px 30px 10px;
 }
 
 #welcome_title {
-	line-height: 20px;
+	font-size: 32px;
+	letter-spacing: 5px;
+	line-height: 25px;
 	margin: 20px 0 20px 0;
 }
 
@@ -289,17 +293,16 @@ body .commentModal {
 #locations_links a {
 		background-color: #16a085;
 		color: #ecf0f1;
-		font-size: 16px;
-		padding: 5px 15px 5px 15px;
-		border-radius: 30px;
+		font-size: 20px;
+		padding: 10px 15px 10px 15px;
 }
 
 .all_of_them {
 	width: 50%;
 	margin: -13px auto -12px auto;
 	display: block;
-	text-align: center;	
-	letter-spacing: 5px;
+	text-align: center;
+	letter-spacing: 10px;
 }
 
 #locations_links {
