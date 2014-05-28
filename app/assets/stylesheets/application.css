@@ -282,9 +282,6 @@ body .commentModal {
 	background: #343d47;
 }
 
-
-
-
 #each_one img {
 	border-radius: 10px;
 	width: 100%;
@@ -300,15 +297,7 @@ body .commentModal {
 }
 
 #locations_links a {
-		
 		background-color: #343d47;
-		/*background: -moz-linear-gradient(top, #1e2124 0%, #343d47 100%);
-		background: -webkit-gradient(left top, left bottom, color-stop(0%, #1e2124), color-stop(100%, #343d47));
-		background: -webkit-linear-gradient(top, #1e2124 0%, #343d47 100%);
-		background: -o-linear-gradient(top, #1e2124 0%, #343d47 100%);
-		background: -ms-linear-gradient(top, #1e2124 0%, #343d47 100%);
-		background: linear-gradient(to bottom, #1e2124 0%, #343d47 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2124', endColorstr='#343d47', GradientType=0 );*/
 		color: #ecf0f1;
 		font-size: 20px;
 		padding: 10px 50px 10px 50px;
@@ -318,6 +307,10 @@ body .commentModal {
 	background-color: #242D36 !important;
 }
 
+  /*for persistent currently selected color - same as hover*/
+#locations_links a.current {
+	background-color: #242d36;
+}
 
 .all_of_them {
 	width: 50%;
@@ -421,7 +414,7 @@ body .commentModal {
 	}
 
 	#back_button {
-		background-color: #16a085;
+		background-color: #343d47;
 		color: #ecf0f1;
 		font-size: 16px;
 		display: block;
@@ -432,7 +425,8 @@ body .commentModal {
 	}
 
 	#back_button:hover {
-		background-color: #1abc9c;
+		background-color: #ccc;
+		color: #000;
 	}
 
 	#site-title {

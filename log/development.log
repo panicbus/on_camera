@@ -11878,3 +11878,1680 @@ Served asset /cctv.ico - 304 Not Modified (0ms)
 
 Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:07:41 -0700
 Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 12:17:05 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mLocation Load (4.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  Rendered checkins/_form.html.erb (32.9ms)
+  [1m[36mCheckin Load (0.4ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2[0m
+  Rendered checkins/_show.html.erb (72.7ms)
+  Rendered checkins/_form.html.erb (10.3ms)
+  Rendered checkins/_show.html.erb (18.6ms)
+  Rendered checkins/_form.html.erb (8.3ms)
+  Rendered checkins/_show.html.erb (13.0ms)
+  Rendered checkins/show.js.erb (120.3ms)
+Completed 200 OK in 191.5ms (Views: 136.9ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/checkins" for 127.0.0.1 at 2014-05-28 12:17:13 -0700
+Processing by CheckinsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAE3jSg8AEGc8foZ8BvxGUwUEkzgaucr2uj4Mg44qso=", "checkin"=>{"location_id"=>"2", "name"=>"test", "comment"=>"test", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00000101469a40 @original_filename="in a box.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"checkin[photo]\"; filename=\"in a box.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/RackMultipart20140528-1504-1ex1v8p>>}, "commit"=>"Check in!", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[35mLocation Load (1.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", "2"]]
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/6b30f4fcbc246887c451ad1f7cb4d80720140528-1504-15z8p7c'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]' -auto-orient -resize "100x100>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh20140528-1504-joyzv3'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh20140528-1504-joyzv3'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]' -auto-orient -resize "200x" -crop "200x200+0+32" +repage '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh20140528-1504-gpywon'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh20140528-1504-gpywon'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh[0]' -auto-orient -resize "370x370>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh20140528-1504-127ww7v'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c35112e61a3fd8af7500a13eaeb54dd720140528-1504-1lvplkh20140528-1504-127ww7v'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/c74ab2d09e7dd9a3bdcccea7fbc5ed7d20140528-1504-dpkqlk'
+Binary data inserted for `string` type on column `photo_content_type`
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "checkins" ("comment", "created_at", "location_id", "name", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["comment", "test"], ["created_at", Wed, 28 May 2014 12:17:14 PDT -07:00], ["location_id", 2], ["name", "test"], ["photo_content_type", "image/jpeg"], ["photo_file_name", "in_a_box.jpg"], ["photo_file_size", 30907], ["photo_updated_at", Wed, 28 May 2014 12:17:13 PDT -07:00], ["updated_at", Wed, 28 May 2014 12:17:14 PDT -07:00]]
+[paperclip] saving /checkins/photos/000/000/008/original/in_a_box.jpg
+[AWS S3 403 0.323596 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>30907,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: in a box.jpg,:key=>"checkins/photos/000/000/008/original/in_a_box.jpg") AWS::S3::Errors::AccessDenied Access Denied
+
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 1106.2ms
+
+AWS::S3::Errors::AccessDenied (Access Denied):
+  app/controllers/checkins_controller.rb:12:in `create'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.2ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:17:14 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:17:15 -0700
+Served asset /cctv.ico - 304 Not Modified (2ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:17:15 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started POST "/checkins" for 127.0.0.1 at 2014-05-28 12:19:02 -0700
+Processing by CheckinsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAE3jSg8AEGc8foZ8BvxGUwUEkzgaucr2uj4Mg44qso=", "checkin"=>{"location_id"=>"2", "name"=>"test", "comment"=>"test w/o pic"}, "commit"=>"Check in!"}
+  [1m[35mLocation Load (1.5ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.1ms)[0m  INSERT INTO "checkins" ("comment", "created_at", "location_id", "name", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["comment", "test w/o pic"], ["created_at", Wed, 28 May 2014 12:19:02 PDT -07:00], ["location_id", 2], ["name", "test"], ["photo_content_type", nil], ["photo_file_name", nil], ["photo_file_size", nil], ["photo_updated_at", nil], ["updated_at", Wed, 28 May 2014 12:19:02 PDT -07:00]]
+  [1m[36m (7.1ms)[0m  [1mcommit transaction[0m
+  Rendered checkins/_create.html.erb (3.6ms)
+  Rendered checkins/create.js.erb (8.7ms)
+Completed 200 OK in 55.1ms (Views: 16.9ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 12:19:07 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  Rendered checkins/_form.html.erb (15.9ms)
+  [1m[36mCheckin Load (0.4ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2[0m
+  Rendered checkins/_show.html.erb (30.1ms)
+  Rendered checkins/_form.html.erb (5.2ms)
+  Rendered checkins/_show.html.erb (9.9ms)
+  Rendered checkins/_form.html.erb (4.1ms)
+  Rendered checkins/_show.html.erb (7.1ms)
+  Rendered checkins/show.js.erb (52.6ms)
+Completed 200 OK in 62.8ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:23:41 -0700
+Served asset /cctv.ico - 304 Not Modified (2ms)
+
+
+Started POST "/checkins" for 127.0.0.1 at 2014-05-28 12:23:41 -0700
+Processing by CheckinsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAE3jSg8AEGc8foZ8BvxGUwUEkzgaucr2uj4Mg44qso=", "checkin"=>{"location_id"=>"2", "name"=>"test ", "comment"=>"pic test II", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001043be6d8 @original_filename="in a box.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"checkin[photo]\"; filename=\"in a box.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/RackMultipart20140528-1504-1ukhk2p>>}, "commit"=>"Check in!", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[35mLocation Load (2.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", "2"]]
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/72b65f88dbc9db024e95c5f621b806d620140528-1504-1oshlf4'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]' -auto-orient -resize "100x100>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza020140528-1504-1c77v3u'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza020140528-1504-1c77v3u'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]' -auto-orient -resize "200x" -crop "200x200+0+32" +repage '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza020140528-1504-1suwmmi'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza020140528-1504-1suwmmi'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza0[0]' -auto-orient -resize "370x370>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza020140528-1504-7yqn4p'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/343373e3ff4186426e11f2b266bcb98b20140528-1504-zilza020140528-1504-7yqn4p'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/60e9ebd333598e3e26c60eded6efd5c320140528-1504-5wc6mo'
+Binary data inserted for `string` type on column `photo_content_type`
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "checkins" ("comment", "created_at", "location_id", "name", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["comment", "pic test II"], ["created_at", Wed, 28 May 2014 12:23:41 PDT -07:00], ["location_id", 2], ["name", "test "], ["photo_content_type", "image/jpeg"], ["photo_file_name", "in_a_box.jpg"], ["photo_file_size", 30907], ["photo_updated_at", Wed, 28 May 2014 12:23:41 PDT -07:00], ["updated_at", Wed, 28 May 2014 12:23:41 PDT -07:00]]
+[paperclip] saving /checkins/photos/000/000/009/original/in_a_box.jpg
+[AWS S3 403 0.690509 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>30907,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: in a box.jpg,:key=>"checkins/photos/000/000/009/original/in_a_box.jpg") AWS::S3::Errors::AccessDenied Access Denied
+
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 1373.8ms
+
+AWS::S3::Errors::AccessDenied (Access Denied):
+  app/controllers/checkins_controller.rb:12:in `create'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:23:43 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 12:23:43 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (3.0ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 52.1ms (Views: 29.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:00:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:00:47 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-28 13:00:48 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (14.8ms)
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 3
+  Rendered checkins/_show.html.erb (35.6ms)
+  Rendered checkins/_form.html.erb (350.2ms)
+  Rendered checkins/_show.html.erb (354.5ms)
+  Rendered checkins/_form.html.erb (37.5ms)
+  Rendered checkins/_show.html.erb (54.0ms)
+  Rendered checkins/show.js.erb (452.2ms)
+Completed 200 OK in 465.2ms (Views: 457.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/checkins" for 127.0.0.1 at 2014-05-28 13:00:59 -0700
+Processing by CheckinsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAE3jSg8AEGc8foZ8BvxGUwUEkzgaucr2uj4Mg44qso=", "checkin"=>{"location_id"=>"3", "name"=>"nico", "comment"=>"nicotest", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001051f72b8 @original_filename="in a box.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"checkin[photo]\"; filename=\"in a box.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/RackMultipart20140528-1504-5wkp9l>>}, "commit"=>"Check in!", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[36mLocation Load (0.7ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/d00852a31b4c8681623610ee6fa6cf0020140528-1504-lwb8ka'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]' -auto-orient -resize "100x100>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on920140528-1504-zq4dlp'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on920140528-1504-zq4dlp'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]' -auto-orient -resize "200x" -crop "200x200+0+32" +repage '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on920140528-1504-s1ptla'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on920140528-1504-s1ptla'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on9[0]' -auto-orient -resize "370x370>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on920140528-1504-t7x1kd'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b65ef65d85cc07b471ce46bd11551f1720140528-1504-5b0on920140528-1504-t7x1kd'
+  [1m[35m (0.2ms)[0m  begin transaction
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/e27a84f14e2bea0fcc166167ff4279a820140528-1504-x5ymbd'
+Binary data inserted for `string` type on column `photo_content_type`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "checkins" ("comment", "created_at", "location_id", "name", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["comment", "nicotest"], ["created_at", Wed, 28 May 2014 13:01:00 PDT -07:00], ["location_id", 3], ["name", "nico"], ["photo_content_type", "image/jpeg"], ["photo_file_name", "in_a_box.jpg"], ["photo_file_size", 30907], ["photo_updated_at", Wed, 28 May 2014 13:00:59 PDT -07:00], ["updated_at", Wed, 28 May 2014 13:01:00 PDT -07:00]]
+[paperclip] saving /checkins/photos/000/000/009/original/in_a_box.jpg
+[AWS S3 403 0.321974 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>30907,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: in a box.jpg,:key=>"checkins/photos/000/000/009/original/in_a_box.jpg") AWS::S3::Errors::AccessDenied Access Denied
+
+  [1m[35m (1.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 839.5ms
+
+AWS::S3::Errors::AccessDenied (Access Denied):
+  app/controllers/checkins_controller.rb:12:in `create'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.7ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:01:00 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:01:01 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:01:01 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 13:15:25 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (4.0ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 108.6ms (Views: 67.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 13:15:26 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:15:28 -0700
+Served asset /cctv.ico - 304 Not Modified (6ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 13:15:34 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mLocation Load (0.8ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  Rendered checkins/_form.html.erb (23.7ms)
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2[0m
+  Rendered checkins/_show.html.erb (43.8ms)
+  Rendered checkins/_form.html.erb (5.6ms)
+  Rendered checkins/_show.html.erb (8.8ms)
+  Rendered checkins/_form.html.erb (5.5ms)
+  Rendered checkins/_show.html.erb (8.6ms)
+  Rendered checkins/show.js.erb (69.6ms)
+Completed 200 OK in 84.0ms (Views: 75.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/checkins" for 127.0.0.1 at 2014-05-28 13:15:46 -0700
+Processing by CheckinsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAE3jSg8AEGc8foZ8BvxGUwUEkzgaucr2uj4Mg44qso=", "checkin"=>{"location_id"=>"2", "name"=>"test ", "comment"=>"pic test", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000010178e7c0 @original_filename="in a box.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"checkin[photo]\"; filename=\"in a box.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/RackMultipart20140528-1504-nt1tod>>}, "commit"=>"Check in!", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[35mLocation Load (0.7ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", "2"]]
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a281b5ab8a12797154302f8e49ea6c220140528-1504-bgsee0'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]' -auto-orient -resize "100x100>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-jrltcm'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-jrltcm'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]' -auto-orient -resize "200x" -crop "200x200+0+32" +repage '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-jfj0t0'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-jfj0t0'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g1[0]' -auto-orient -resize "370x370>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-bysc2z'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-bysc2z'
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/63552d11572653d3ce8e5f8a715febfb20140528-1504-1n1i68l'
+Binary data inserted for `string` type on column `photo_content_type`
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "checkins" ("comment", "created_at", "location_id", "name", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["comment", "pic test"], ["created_at", Wed, 28 May 2014 13:15:46 PDT -07:00], ["location_id", 2], ["name", "test "], ["photo_content_type", "image/jpeg"], ["photo_file_name", "in_a_box.jpg"], ["photo_file_size", 30907], ["photo_updated_at", Wed, 28 May 2014 13:15:46 PDT -07:00], ["updated_at", Wed, 28 May 2014 13:15:46 PDT -07:00]]
+[paperclip] saving /checkins/photos/000/000/009/original/in_a_box.jpg
+[AWS S3 200 0.266653 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>30907,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: in a box.jpg,:key=>"checkins/photos/000/000/009/original/in_a_box.jpg")  
+
+[paperclip] saving /checkins/photos/000/000/009/thumb/in_a_box.jpg
+[AWS S3 200 0.078714 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>2064,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-jrltcm,:key=>"checkins/photos/000/000/009/thumb/in_a_box.jpg")  
+
+[paperclip] saving /checkins/photos/000/000/009/square/in_a_box.jpg
+[AWS S3 200 0.078974 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>7214,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-jfj0t0,:key=>"checkins/photos/000/000/009/square/in_a_box.jpg")  
+
+[paperclip] saving /checkins/photos/000/000/009/medium/in_a_box.jpg
+[AWS S3 200 0.046042 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>16015,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: 9a9c18c05d2879ca761aa2cd06ed642020140528-1504-1rl95g120140528-1504-bysc2z,:key=>"checkins/photos/000/000/009/medium/in_a_box.jpg")  
+
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+  Rendered checkins/_create.html.erb (2.6ms)
+  Rendered checkins/create.js.erb (4.5ms)
+Completed 200 OK in 1020.5ms (Views: 9.1ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:15:47 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:15:47 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 13:15:47 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 13:15:57 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  Rendered checkins/_form.html.erb (3.7ms)
+  [1m[36mCheckin Load (0.5ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2[0m
+  Rendered checkins/_show.html.erb (14.8ms)
+  Rendered checkins/_form.html.erb (4.5ms)
+  Rendered checkins/_show.html.erb (10.3ms)
+  Rendered checkins/_form.html.erb (5.1ms)
+  Rendered checkins/_show.html.erb (18.9ms)
+  Rendered checkins/show.js.erb (55.2ms)
+Completed 200 OK in 147.8ms (Views: 57.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 15:33:09 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (2.8ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49.8ms (Views: 33.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:10 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:33:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:33:11 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:33:13 -0700
+Served asset /cctv.ico - 304 Not Modified (2ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 15:33:13 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (11.7ms)
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2
+  Rendered checkins/_show.html.erb (31.2ms)
+  Rendered checkins/_form.html.erb (9.6ms)
+  Rendered checkins/_show.html.erb (19.5ms)
+  Rendered checkins/_form.html.erb (6.1ms)
+  Rendered checkins/_show.html.erb (12.5ms)
+  Rendered checkins/show.js.erb (71.5ms)
+Completed 200 OK in 83.9ms (Views: 75.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/checkins" for 127.0.0.1 at 2014-05-28 15:33:27 -0700
+Processing by CheckinsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SAE3jSg8AEGc8foZ8BvxGUwUEkzgaucr2uj4Mg44qso=", "checkin"=>{"location_id"=>"2", "name"=>"test", "comment"=>"testing", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00000101622418 @original_filename="getty.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"checkin[photo]\"; filename=\"getty.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<Tempfile:/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/RackMultipart20140528-1504-1r2ug90>>}, "commit"=>"Check in!", "remotipart_submitted"=>"true", "X-Requested-With"=>"IFrame", "X-Http-Accept"=>"text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01"}
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/bb64ecda34f8c4667095075ac01e274520140528-1504-d9nz83'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]' -auto-orient -resize "100x100>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-7xfbbg'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-7xfbbg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]' -auto-orient -resize "x200" -crop "200x200+41+0" +repage '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-1n9x5fj'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-1n9x5fj'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]'
+Command :: convert '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy[0]' -auto-orient -resize "370x370>" '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-a4nghy'
+Command :: file -b --mime '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-a4nghy'
+  [1m[35m (0.5ms)[0m  begin transaction
+Command :: file -b --mime-type '/var/folders/cm/9k3f22ms213_zj6fgf2mwlqr0000gn/T/b5f593da01d8a2568feacded80890f0c20140528-1504-ptbrkz'
+Binary data inserted for `string` type on column `photo_content_type`
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "checkins" ("comment", "created_at", "location_id", "name", "photo_content_type", "photo_file_name", "photo_file_size", "photo_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["comment", "testing"], ["created_at", Wed, 28 May 2014 15:33:27 PDT -07:00], ["location_id", 2], ["name", "test"], ["photo_content_type", "image/jpeg"], ["photo_file_name", "getty.jpg"], ["photo_file_size", 61180], ["photo_updated_at", Wed, 28 May 2014 15:33:27 PDT -07:00], ["updated_at", Wed, 28 May 2014 15:33:27 PDT -07:00]]
+[paperclip] saving /checkins/photos/000/000/010/original/getty.jpg
+[AWS S3 200 0.68715 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>61180,:content_type=>"image/jpeg",:data=>Paperclip::UploadedFileAdapter: getty.jpg,:key=>"checkins/photos/000/000/010/original/getty.jpg")  
+
+[paperclip] saving /checkins/photos/000/000/010/thumb/getty.jpg
+[AWS S3 200 0.081671 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>4913,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-7xfbbg,:key=>"checkins/photos/000/000/010/thumb/getty.jpg")  
+
+[paperclip] saving /checkins/photos/000/000/010/square/getty.jpg
+[AWS S3 200 0.187004 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>23833,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-1n9x5fj,:key=>"checkins/photos/000/000/010/square/getty.jpg")  
+
+[paperclip] saving /checkins/photos/000/000/010/medium/getty.jpg
+[AWS S3 200 0.360144 0 retries] put_object(:acl=>:public_read,:bucket_name=>"scenic49",:content_length=>49078,:content_type=>"image/jpeg",:data=>Paperclip::FileAdapter: a6a5f738d84ef19bfcd8c418d534ed7c20140528-1504-1534jdy20140528-1504-a4nghy,:key=>"checkins/photos/000/000/010/medium/getty.jpg")  
+
+  [1m[35m (5.9ms)[0m  commit transaction
+  Rendered checkins/_create.html.erb (2.4ms)
+  Rendered checkins/create.js.erb (3.8ms)
+Completed 200 OK in 1850.6ms (Views: 7.0ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:33:28 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:33:29 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:33:29 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 15:33:39 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (9.5ms)
+  [1m[35mCheckin Load (0.6ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2
+  Rendered checkins/_show.html.erb (41.2ms)
+  Rendered checkins/_form.html.erb (3.4ms)
+  Rendered checkins/_show.html.erb (28.0ms)
+  Rendered checkins/_form.html.erb (2.9ms)
+  Rendered checkins/_show.html.erb (32.9ms)
+  Rendered checkins/show.js.erb (115.9ms)
+Completed 200 OK in 120.4ms (Views: 117.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/checkins/1" for 127.0.0.1 at 2014-05-28 15:43:05 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mLocation Load (0.5ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (4.0ms)
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 1
+  Rendered checkins/_show.html.erb (8.5ms)
+  Rendered checkins/_form.html.erb (3.4ms)
+  Rendered checkins/_show.html.erb (6.1ms)
+  Rendered checkins/_form.html.erb (3.4ms)
+  Rendered checkins/_show.html.erb (5.9ms)
+  Rendered checkins/show.js.erb (26.9ms)
+Completed 200 OK in 32.2ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 15:44:55 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.6ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (2ms)  (pid 1504)
+Completed 200 OK in 61.5ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /application.css - 200 OK (12ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:44:56 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/1" for 127.0.0.1 at 2014-05-28 15:45:00 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35mLocation Load (12.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  Rendered checkins/_form.html.erb (3.1ms)
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 1[0m
+  Rendered checkins/_show.html.erb (10.1ms)
+  Rendered checkins/_form.html.erb (3.6ms)
+  Rendered checkins/_show.html.erb (6.0ms)
+  Rendered checkins/_form.html.erb (2.8ms)
+  Rendered checkins/_show.html.erb (6.7ms)
+  Rendered checkins/show.js.erb (29.1ms)
+Completed 200 OK in 45.6ms (Views: 31.6ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 15:45:26 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (2ms)  (pid 1504)
+Completed 200 OK in 32.6ms (Views: 30.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:45:27 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:45:29 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 15:45:34 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (5.6ms)
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2
+  Rendered checkins/_show.html.erb (17.4ms)
+  Rendered checkins/_form.html.erb (2.8ms)
+  Rendered checkins/_show.html.erb (8.8ms)
+  Rendered checkins/_form.html.erb (3.2ms)
+  Rendered checkins/_show.html.erb (9.6ms)
+  Rendered checkins/show.js.erb (41.7ms)
+Completed 200 OK in 45.2ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.6ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11.6ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:57 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:45:58 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:45:58 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:45:59 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.5ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 11.6ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:46:07 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:46:08 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/2" for 127.0.0.1 at 2014-05-28 15:46:17 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (3.4ms)
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 2
+  Rendered checkins/_show.html.erb (24.2ms)
+  Rendered checkins/_form.html.erb (4.4ms)
+  Rendered checkins/_show.html.erb (10.2ms)
+  Rendered checkins/_form.html.erb (2.6ms)
+  Rendered checkins/_show.html.erb (10.6ms)
+  Rendered checkins/show.js.erb (51.5ms)
+Completed 200 OK in 56.1ms (Views: 54.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-28 15:46:29 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (6.0ms)
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 3
+  Rendered checkins/_show.html.erb (11.6ms)
+  Rendered checkins/_form.html.erb (11.4ms)
+  Rendered checkins/_show.html.erb (23.5ms)
+  Rendered checkins/_form.html.erb (45.2ms)
+  Rendered checkins/_show.html.erb (47.9ms)
+  Rendered checkins/show.js.erb (119.2ms)
+Completed 200 OK in 124.4ms (Views: 122.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/checkins/4" for 127.0.0.1 at 2014-05-28 15:46:38 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (6.0ms)
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 4
+  Rendered checkins/_show.html.erb (9.6ms)
+  Rendered checkins/_form.html.erb (2.9ms)
+  Rendered checkins/_show.html.erb (4.1ms)
+  Rendered checkins/_form.html.erb (3.1ms)
+  Rendered checkins/_show.html.erb (4.4ms)
+  Rendered checkins/show.js.erb (22.8ms)
+Completed 200 OK in 26.2ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 15:47:08 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 13.4ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:47:08 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:47:08 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:47:09 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:47:10 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 45.1ms (Views: 39.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ajaxcall.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /ajaxcall.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /dropdownNav.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:47:21 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.5ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (24.7ms)
+Compiled all_checkins_buttons.js  (0ms)  (pid 1504)
+Compiled application.js  (18ms)  (pid 1504)
+Completed 200 OK in 123.0ms (Views: 119.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /all_checkins_buttons.js - 200 OK (3ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:52:25 -0700
+Served asset /application.js - 304 Not Modified (44ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:52:26 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:52:27 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:52:27 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 15:54:03 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (2.3ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (1.6ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (38.7ms)
+Compiled all_checkins_buttons.js  (0ms)  (pid 1504)
+Compiled application.js  (12ms)  (pid 1504)
+Completed 200 OK in 126.5ms (Views: 115.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /all_checkins_buttons.js - 200 OK (2ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:04 -0700
+Served asset /application.js - 304 Not Modified (128ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 15:54:29 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (31.3ms)
+Compiled all_checkins_buttons.js  (0ms)  (pid 1504)
+Compiled application.js  (9ms)  (pid 1504)
+Completed 200 OK in 93.3ms (Views: 90.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /all_checkins_buttons.js - 200 OK (3ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:54:30 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:54:31 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:54:31 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.6ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (32.6ms)
+Compiled all_checkins_buttons.js  (0ms)  (pid 1504)
+Compiled application.js  (14ms)  (pid 1504)
+Completed 200 OK in 103.0ms (Views: 98.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /checkins.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /all_checkins_buttons.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 15:54:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 15:54:51 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 16:04:54 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (26.3ms)
+Compiled application.css  (1ms)  (pid 1504)
+Compiled all_checkins_buttons.js  (0ms)  (pid 1504)
+Compiled application.js  (9ms)  (pid 1504)
+Completed 200 OK in 110.8ms (Views: 107.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /all_checkins_buttons.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 16:04:55 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 16:04:56 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 16:04:56 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-28 16:05:57 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 4 LIMIT 1[0m
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (28.2ms)
+Compiled application.css  (1ms)  (pid 1504)
+Completed 200 OK in 53.1ms (Views: 47.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:58 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 16:05:59 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 16:06:00 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-28 16:06:00 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
