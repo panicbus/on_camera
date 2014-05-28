@@ -169,6 +169,11 @@ hr {
 	cursor: pointer;
 }
 
+.modal-body {
+	font-family: 'Numans', sans-serif;
+	font-size: 17px;
+}
+
 /*The form*/
 #name {
 	height: 30px;
@@ -256,6 +261,7 @@ body .commentModal {
 }
 /* ////end isotope/// */
 
+
 /*/////all checkins page styling////*/
 
 .allCheckins {
@@ -274,13 +280,6 @@ body .commentModal {
 	width: 31%;
 	font-size: 20px;
 	background: #343d47;
-/*	background: -moz-linear-gradient(top, #1e2124 0%, #343d47 100%);
-	background: -webkit-gradient(left top, left bottom, color-stop(0%, #1e2124), color-stop(100%, #343d47));
-	background: -webkit-linear-gradient(top, #1e2124 0%, #343d47 100%);
-	background: -o-linear-gradient(top, #1e2124 0%, #343d47 100%);
-	background: -ms-linear-gradient(top, #1e2124 0%, #343d47 100%);
-	background: linear-gradient(to bottom, #1e2124 0%, #343d47 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e2124', endColorstr='#343d47', GradientType=0 );*/
 }
 
 

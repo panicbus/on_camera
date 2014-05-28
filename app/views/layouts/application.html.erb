@@ -5,6 +5,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta charset='utf-8' />
   <link href='http://fonts.googleapis.com/css?family=Special+Elite|Unica+One|Numans' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="/assets/cctv.ico" type="image/x-icon">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
   <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -47,12 +48,12 @@
       <ul class="nav navbar-nav">
         <li id="closeIt" class="dropdown">
         <% if !@all_checkins %> <!-- to hide the nav dropdown in all_checkins view -->
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Stations <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Cameras<b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a class="drop1" href="#">Station #1</a></li>
-            <li><a class="drop2" href="#">Station #2</a></li>
-            <li><a class="drop3" href="#">Station #3</a></li>
-            <li><a class="drop4" href="#">Station #4</a></li>
+            <li><a class="drop1" href="#">Camera #1</a></li>
+            <li><a class="drop2" href="#">Camera #2</a></li>
+            <li><a class="drop3" href="#">Camera #3</a></li>
+            <li><a class="drop4" href="#">Camera #4</a></li>
           </ul>
           <%end%>
       <li><%= link_to "All the checkins", "/all_checkins" %></li>
@@ -77,23 +78,23 @@
         <h4 class="modal-title" id="myModalLabel">How to Use This Site</h4>
       </div>
       <div class="modal-body">
-        <p>There are 2 ways to navigate this site when checking in at a Station:</p>
+        <p>There are 2 ways to navigate this site when checking in:</p>
         <ol>
-          <li>By clicking/tapping on a marker on the map that corresponds to your current location in the City.</li>
-          <li>By selecting the Station from 'The Stations' dropdown in the top nav bar.</li>
+          <li>Click/tap a marker on the map that corresponds to your current location.</li>
+          <li>Select your current Camera from <em>The Cameras</em> dropdown in the top nav bar.</li>
         </ol>
-        <p>Enter your name and comment in the form and hit submit (hit the (?) for a comment tip!). Your check-in will be immediately saved.</p>
+        <p>Enter your name and comment in the form and hit submit. (Need some comment inspiration? Hit the <span style="color:red">(?)</span> .) Your check-in will be saved.</p>
         <p>Upload a photo from your phone or tablet by clicking the 'Choose photo' button, browse to the correct folder and click upload, or take a photo with your camera and click upload.</p>
-        <p><em><b>If you're submitting a photo, ONLY TAP THE SUBMIT BUTTON ONCE. And be patient. Our uploader can take some time, especially if the photo's large.</b></em></p> 
+        <p style="color:#c0392b"><b>If you're submitting a photo, ONLY TAP THE SUBMIT BUTTON ONCE. And be patient. Our uploader can take some time, especially if the photo's large.</b></p> 
         <br>
         <h3>Visiting after the hike is over?</h3>
         <p>There are 3 ways to navigate the comments on the site:</p>
         <ol>
           <li>Via the markers on the map.</li>
-          <li>Via Stations dropdown in the top nav.</li>
+          <li>Via The Camera's dropdown in the top nav.</li>
           <li>Via "All the checkins" link just next to it. Filter your results by station!</li>
         </ol>
-        <p>Thanks for visiting and/or participating in On The Road: The Scenic 49!</p>
+        <p>Thanks for visiting and/or participating in <em>On Camera: The Watchmen</em></p>
         <p>~ Peter and Chris</p>
         </div>
       <div class="modal-footer">
@@ -113,18 +114,17 @@
       </div>
       <div class="modal-body">
 
-        <p>For <em>The Watchmen</em> show at Torrance Art Museum, the <a href="http://mobileartsplatform.wordpress.com/">Mobile Arts Platform</a> (MAP) will utilize their mobile printmaking backpack to hike a route through the city of LA and set up printmaking stations at locations that are in obvious view of surveillance cameras along the way.</p> 
+        <p>For <em>The Watchmen</em> show at Torrance Art Museum, the <a href="http://mobileartsplatform.wordpress.com/">Mobile Arts Platform</a> (MAP) will utilize their mobile printmaking backpack to hike a route through the city of LA and set up printmaking stations at locations that are in obvious view of surveillance cameras.</p> 
 
         <p>The project will be an attempt to start a dialogue with community residents and the surveillance cameras that reside in these neighborhoods. MAP will engage the public in front of these cameras, challenging participants to consider and respond to the camera's gaze in their community. 
 
         <p>What message or messages would you convey to surveillance cameras in your neighborhood?</p> 
 
-        <p>The project will be an intervention of fair exchange in which the public gets a free interactive screenprint relevant to their community in exchange for their personal opinions, thoughts and feelings based on their neighborhood and the outside third eye. In this one sided dialogue, participants fill in their response and hold it up to the camera.</p>
+        <p>The project is an intervention of fair exchange in which the public gets a free interactive screenprint relevant to their community in exchange for their opinions about their neighborhoods and the outside third eye. In this one-sided dialogue, participants fill in their response and hold it up to the camera.</p>
 
-        <p>This project strives to provide a platform to consider community relations to these cameras while considering concepts of audience and observer in our lives.</p> 
+        <p>This project strives to provide a platform to consider community relationships to CCTV cameras while considering the concepts of audience and observer in our lives.</p> 
 
-        <p>In addition to the walking project and in collaboration with web designers <a href="http://www.nicocrisafulli.com">Nico Crisafulli</a> and <a href="http://bkahler.github.io/">Bryan Kahler</a> MAP has created this interactive online map that lists set-up locations and provides a dialog space where the public can write in their thoughts using their smart phone or tablet.</p>
-
+        <p>In collaboration with web designers <a href="http://www.nicocrisafulli.com">Nico Crisafulli</a> and <a href="http://bkahler.github.io/">Bryan Kahler</a>, MAP has created this interactive online map to provide a dialog space where the public can write in their thoughts using their smart phone or tablet.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
