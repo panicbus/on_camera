@@ -46,7 +46,12 @@ a:hover {
 
 .nav_title {
 	font-size: 25px;
-	margin: -3px 0 0 -20px;
+	margin: 5px 0 0 -20px;
+}
+
+ /*to vert align the modal links in nav*/
+.navbar-nav {
+	margin-top: 5px;
 }
 
 .subtitle {
@@ -111,16 +116,30 @@ a:hover {
 	text-align: center;
 	margin: 40px 10px 10px 10px;
 	font-size: 22px;
-	background-color: rgba(255,255,255,0.4);
+	background-color: #2E403E;
 	border-radius: 3px;
 	padding: 0px 10px 30px 10px;
 }
 
 #welcome_title {
-	font-size: 32px;
-	letter-spacing: 5px;
+	font-family: 'Special Elite', cursive;
 	line-height: 25px;
 	margin: 20px 0 20px 0;
+}
+
+.welcome_title_top {
+	font-size: 38px;
+	letter-spacing: 10px;
+}
+
+.welcome_title_bottom {
+	letter-spacing: 5px;
+	font-size: 28px;
+	
+}
+
+.welcome_subtitle {
+	font-size: 22px;
 }
 
 .bird_on_it {
@@ -264,6 +283,7 @@ body .commentModal {
 
 /*/////all checkins page styling////*/
 
+/* main filter */
 .allCheckins {
 	height: 80%;
 	width: 100%;
@@ -279,7 +299,8 @@ body .commentModal {
 	border-radius: 2px;
 	width: 31%;
 	font-size: 20px;
-	background: #343d47;
+	font-family: 'Numans', sans-serif;
+	background: #5C6466;
 }
 
 #each_one img {
@@ -297,19 +318,19 @@ body .commentModal {
 }
 
 #locations_links a {
-		background-color: #343d47;
+		background-color: #5C6466;
 		color: #ecf0f1;
 		font-size: 20px;
 		padding: 10px 50px 10px 50px;
 }
 
 #locations_links a:hover {
-	background-color: #242D36 !important;
+	background-color: #2E403E !important;
 }
 
   /*for persistent currently selected color - same as hover*/
 #locations_links a.current {
-	background-color: #242d36;
+	background-color: #2E403E;
 }
 
 .all_of_them {
@@ -359,6 +380,8 @@ body .commentModal {
 	#welcome {
 		position: fixed;
 		margin: 10px 10px 10px 10px;
+		padding-top: 15px;
+		height: 170px;
 	}
 
 	#welcome_title {
@@ -414,7 +437,7 @@ body .commentModal {
 	}
 
 	#back_button {
-		background-color: #343d47;
+		background-color: #2E403E;
 		color: #ecf0f1;
 		font-size: 16px;
 		display: block;

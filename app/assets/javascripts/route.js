@@ -1,11 +1,6 @@
 // all the json data for marker locations and routeline
 
 
-// var markerIcon = {
-//   url: '/assets/cctv_marker.png'
-// };
-
-
 var geoJson_features = [
 {
   type: "Feature",
@@ -16,10 +11,16 @@ var geoJson_features = [
   properties: {
     title: 'Camera 1',
     description: 'Downtown Pasadena',
-    'marker-color': '#2b2b2b',
+    icon: {
+      "iconUrl": "assets/cctv_marker.png",
+      "iconSize": [30, 30], // size of the icon
+      "iconAnchor": [15, 40], // point of the icon which will correspond to marker's location
+      "popupAnchor": [0, -35], // point from which the popup should open relative to the iconAnchor
+      "className": "dot"
+    },
+    'marker-color': '#2E403E',
     'marker-size': 'large',
-    'marker-symbol': 1,
-    // icon: markerIcon,
+    'marker-symbol': 'city',
     location_id: 1
   }
 },
@@ -32,9 +33,16 @@ var geoJson_features = [
   properties: {
     title: 'Camera 2',
     description: 'Convention Center',
-    'marker-color': '#2b2b2b',
+    icon: {
+      "iconUrl": "assets/cctv_marker.png",
+      "iconSize": [30, 30], // size of the icon
+      "iconAnchor": [15, 30], // point of the icon which will correspond to marker's location
+      "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+      "className": "dot"
+    },
+    'marker-color': '#2E403E',
     'marker-size': 'large',
-    'marker-symbol': 2,
+    'marker-symbol': 'city',
     location_id: 2
   }
 },
@@ -47,9 +55,16 @@ var geoJson_features = [
   properties: {
     title: 'Camera 3',
     description: 'Chinatown',
-    'marker-color': '#2b2b2b',
-    'marker-size': 'large',
-    'marker-symbol': 3,
+    icon: {
+      "iconUrl": "assets/cctv_marker.png",
+      "iconSize": [30, 30], // size of the icon
+      "iconAnchor": [15, 30], // point of the icon which will correspond to marker's location
+      "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+      "className": "dot"
+    },
+  'marker-color': '#2E403E',
+  'marker-size': 'large',
+  'marker-symbol': 'city',
     location_id: 3
   }
 },
@@ -62,40 +77,21 @@ var geoJson_features = [
   properties: {
     title: 'Camera 4',
     description: 'Hollywood Boulevard',
-    'marker-color': '#2b2b2b',
+    icon: {
+      "iconUrl": "assets/cctv_marker.png",
+      "iconSize": [30, 30], // size of the icon
+      "iconAnchor": [15, 30], // point of the icon which will correspond to marker's location
+      "popupAnchor": [0, -25], // point from which the popup should open relative to the iconAnchor
+      "className": "dot"
+    },
+    'marker-color': '#2E403E',
     'marker-size': 'large',
-    'marker-symbol': 4,
+    'marker-symbol': 'city',
     location_id: 4
   }
 },
 
-
-
 ////// the route linestring starts here ///////
-// {
-//   "geometry": {
-//     "coordinates": [
-//       [
-//       -122.42674827575682,
-//       37.76786513360663
-//     ],
-    
-//     [ -122.42674827575682,
-//       37.76786513360663
-//     ]
-//   ],
-//           "type": "LineString"
-//         },
-//       "properties": {
-//         "stroke": "#000",
-//         "stroke-opacity": 1,
-//         "stroke-width": 3
-//       },
-//        type: "Feature"
-//     }
-// ];
-
-/// LA route from geojson.io
 {
   "geometry":{
     "coordinates":[

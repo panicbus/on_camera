@@ -20,10 +20,21 @@ function initialize_map(){
 
 	// var stamenLayer = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>.'}).addTo(map);
 
+/////////////////
+	var myLayer = L.mapbox.featureLayer().addTo(map);
 
+	myLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+    marker.setIcon(L.icon(feature.properties.icon));
+	});
+
+	// Add features to the map.
+	myLayer.setGeoJSON(geoJson_features);
+///////////////
 
 	// adds the GeoJson to the map layer from route.js
-	map.featureLayer.setGeoJSON(geoJson_features);
+	// map.featureLayer.setGeoJSON(geoJson_features);
 
 	
 	// this is the marker click listener 
