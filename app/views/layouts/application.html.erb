@@ -4,7 +4,7 @@
   <title>On Camera: The Watchmen</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta charset='utf-8' />
-  <link href='http://fonts.googleapis.com/css?family=Special+Elite|Unica+One|Numans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite|Unica+One|Numans|Text+Me+One' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="/assets/cctv.ico" type="image/x-icon">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
  	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
@@ -40,25 +40,25 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a class="howitworks_modal" data-toggle="modal" data-target="#howItWorksModal">How To Use This Site</a></li>
+        <li><a class="howitworks_modal nav-link" data-toggle="modal" data-target="#howItWorksModal">How To Use This Site</a></li>
       </ul>
       <ul class="nav navbar-nav">
         <li id="closeIt" class="dropdown">
         <% if !@all_checkins %> <!-- to hide the nav dropdown in all_checkins view -->
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">The Cameras<b class="caret"></b></a>
-          <ul class="dropdown-menu">
+          <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">The Cameras<b class="caret"></b></a>
+          <ul class="dropdown-menu nav-link">
             <li><a class="drop1" href="#">Camera #1</a></li>
             <li><a class="drop2" href="#">Camera #2</a></li>
             <li><a class="drop3" href="#">Camera #3</a></li>
             <li><a class="drop4" href="#">Camera #4</a></li>
           </ul>
           <%end%>
-      <li><%= link_to "All the checkins", "/all_checkins" %></li>
+      <li class="nav-link"><%= link_to "All the checkins", "/all_checkins" %></li>
         </li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="about_modal" data-toggle="modal" data-target="#aboutModal">About</a></li>
+        <li><a class="about_modal nav-link" data-toggle="modal" data-target="#aboutModal">About</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -83,13 +83,12 @@
         <p>Enter your name and comment in the form and hit submit. (Need some comment inspiration? Hit the <span style="color:red">(?)</span> .) Your check-in will be saved.</p>
         <p>Upload a photo from your phone or tablet by clicking the 'Choose photo' button, browse to the correct folder and click upload, or take a photo with your camera and click upload.</p>
         <p style="color:#c0392b"><b>If you're submitting a photo, ONLY TAP THE SUBMIT BUTTON ONCE. And be patient. Our uploader can take some time, especially if the photo's large.</b></p> 
-        <br>
         <h3>Visiting after the hike is over?</h3>
-        <p>There are 3 ways to navigate the comments on the site:</p>
+        <p>View all the comments in one of these ways:</p>
         <ol>
-          <li>Via the markers on the map.</li>
-          <li>Via The Camera's dropdown in the top nav.</li>
-          <li>Via "All the checkins" link just next to it. Filter your results by station!</li>
+          <li>By way of the markers on the map.</li>
+          <li>By way of <em>The Camera's</em> dropdown in the top nav.</li>
+          <li>By way of <em>All the checkins</em> link just next to it. Filter your results by station!</li>
         </ol>
         <p>Thanks for visiting and/or participating in <em>On Camera: The Watchmen</em></p>
         <p>~ Peter and Chris</p>
@@ -111,15 +110,17 @@
       </div>
       <div class="modal-body">
 
-        <p>For <em>The Watchmen</em> show at Torrance Art Museum, the <a href="http://mobileartsplatform.wordpress.com/">Mobile Arts Platform</a> (MAP) will utilize their mobile printmaking backpack to hike a route through the city of LA and set up printmaking stations at locations that are in obvious view of surveillance cameras.</p> 
+        <p>For <em>The Watchmen</em> show at Torrance Art Museum, the <a href="http://mobileartsplatform.wordpress.com/">Mobile Arts Platform</a> (MAP) will utilize their Mobile Printmaking Backpack and hike a route through the city of LA setting up printmaking stations at locations that are in obvious view of surveillance cameras.</p> 
 
-        <p>The project will be an attempt to start a dialogue with community residents and the surveillance cameras that reside in these neighborhoods. MAP will engage the public in front of these cameras, challenging participants to consider and respond to the camera's gaze in their community. 
+        <p>The project is an attempt to start a dialogue between community residents and the surveillance cameras that reside in these neighborhoods. MAP will engage the public in front of these cameras, challenging participants to consider and respond to the camera's all powerful gaze. 
 
-        <p>What message or messages would you convey to surveillance cameras in your neighborhood?</p> 
+        <p>What message or messages would you convey to surveillance cameras in <em>your</em> neighborhood?</p> 
 
-        <p>The project is an intervention of fair exchange in which the public gets a free interactive screenprint relevant to their community in exchange for their opinions about their neighborhoods and the outside third eye. In this one-sided dialogue, participants fill in their response and hold it up to the camera.</p>
+        <p><em>The Watchmen</em> is an intervention of fair exchange in which the public gets a free interactive screenprint relevant to their community in exchange for their opinions about their neighborhood and the outside third eye.</p> 
 
-        <p>This project strives to provide a platform to consider community relationships to CCTV cameras while considering the concepts of audience and observer in our lives.</p> 
+        <p>In this one-sided dialogue, participants fill in their response and hold it up to the camera.</p>
+
+        <p>This project strives to provide a platform to consider community relationships with CCTV cameras while considering the concepts of audience and observer.</p> 
 
         <p>In collaboration with web designers <a href="http://www.nicocrisafulli.com">Nico Crisafulli</a> and <a href="http://bkahler.github.io/">Bryan Kahler</a>, MAP has created this interactive online map to provide a dialog space where the public can write in their thoughts using their smart phone or tablet.</p>
       </div>

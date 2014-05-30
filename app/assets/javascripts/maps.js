@@ -30,11 +30,11 @@ function initialize_map(){
 	});
 
 	// Add features to the map.
-	myLayer.setGeoJSON(geoJson_features);
+	// myLayer.setGeoJSON(geoJson_features);
 ///////////////
 
 	// adds the GeoJson to the map layer from route.js
-	// map.featureLayer.setGeoJSON(geoJson_features);
+	map.featureLayer.setGeoJSON(geoJson_features);
 
 	
 	// this is the marker click listener 
