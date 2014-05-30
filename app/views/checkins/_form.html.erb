@@ -28,8 +28,10 @@
     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
   </div>
   
-  <br>
-    
+    <% if !@location.checkins.any? %>
+      <br><br><br>
+    <% end %>
+
 <% end %>
 
 
