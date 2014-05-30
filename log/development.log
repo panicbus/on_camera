@@ -34568,3 +34568,404 @@ Processing by CheckinsController#show as */*
   Rendered checkins/_show.html.erb (3.6ms)
   Rendered checkins/show.js.erb (16.6ms)
 Completed 200 OK in 20.3ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 16:12:46 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11.7ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-30 16:12:47 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-30 16:12:48 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:12:49 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  Rendered checkins/_form.html.erb (5.4ms)
+  Rendered checkins/_show.html.erb (6.5ms)
+  Rendered checkins/show.js.erb (7.6ms)
+Completed 500 Internal Server Error in 11.4ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    28:     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
+    29:   </div>
+    30:   <!-- for scroll space after form only if no checkins -->
+    31:   <% if @checkin.!present? %>
+    32:     <br><br><br>
+    33:   <% end %>  
+    34: <% end %>
+  app/views/checkins/_form.html.erb:31:in `!'
+  app/views/checkins/_form.html.erb:31:in `block in _app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_form.html.erb:1:in `_app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_show.html.erb:17:in `_app_views_checkins__show_html_erb___4315236905702132195_2177956420'
+  app/views/checkins/show.js.erb:3:in `_app_views_checkins_show_js_erb___1590714278751897238_2178067260'
+  app/controllers/checkins_controller.rb:29:in `show'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (16.9ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (36.3ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:12:50 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (4.1ms)
+  Rendered checkins/_show.html.erb (4.9ms)
+  Rendered checkins/show.js.erb (6.0ms)
+Completed 500 Internal Server Error in 10.1ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    28:     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
+    29:   </div>
+    30:   <!-- for scroll space after form only if no checkins -->
+    31:   <% if @checkin.!present? %>
+    32:     <br><br><br>
+    33:   <% end %>  
+    34: <% end %>
+  app/views/checkins/_form.html.erb:31:in `!'
+  app/views/checkins/_form.html.erb:31:in `block in _app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_form.html.erb:1:in `_app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_show.html.erb:17:in `_app_views_checkins__show_html_erb___4315236905702132195_2177956420'
+  app/views/checkins/show.js.erb:3:in `_app_views_checkins_show_js_erb___1590714278751897238_2178067260'
+  app/controllers/checkins_controller.rb:29:in `show'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.8ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.8ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:12:51 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  Rendered checkins/_form.html.erb (4.2ms)
+  Rendered checkins/_show.html.erb (5.3ms)
+  Rendered checkins/show.js.erb (6.1ms)
+Completed 500 Internal Server Error in 9.5ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    28:     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
+    29:   </div>
+    30:   <!-- for scroll space after form only if no checkins -->
+    31:   <% if @checkin.!present? %>
+    32:     <br><br><br>
+    33:   <% end %>  
+    34: <% end %>
+  app/views/checkins/_form.html.erb:31:in `!'
+  app/views/checkins/_form.html.erb:31:in `block in _app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_form.html.erb:1:in `_app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_show.html.erb:17:in `_app_views_checkins__show_html_erb___4315236905702132195_2177956420'
+  app/views/checkins/show.js.erb:3:in `_app_views_checkins_show_js_erb___1590714278751897238_2178067260'
+  app/controllers/checkins_controller.rb:29:in `show'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:12:51 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (5.2ms)
+  Rendered checkins/_show.html.erb (7.2ms)
+  Rendered checkins/show.js.erb (8.3ms)
+Completed 500 Internal Server Error in 12.9ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    28:     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
+    29:   </div>
+    30:   <!-- for scroll space after form only if no checkins -->
+    31:   <% if @checkin.!present? %>
+    32:     <br><br><br>
+    33:   <% end %>  
+    34: <% end %>
+  app/views/checkins/_form.html.erb:31:in `!'
+  app/views/checkins/_form.html.erb:31:in `block in _app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_form.html.erb:1:in `_app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_show.html.erb:17:in `_app_views_checkins__show_html_erb___4315236905702132195_2177956420'
+  app/views/checkins/show.js.erb:3:in `_app_views_checkins_show_js_erb___1590714278751897238_2178067260'
+  app/controllers/checkins_controller.rb:29:in `show'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.0ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:12:51 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  Rendered checkins/_form.html.erb (4.0ms)
+  Rendered checkins/_show.html.erb (4.8ms)
+  Rendered checkins/show.js.erb (5.7ms)
+Completed 500 Internal Server Error in 11.2ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 0)):
+    28:     <p style="color:pink;font-size:15px;margin-top:6px">*Photo uploads take 5-30 seconds. Please be patient.</p>
+    29:   </div>
+    30:   <!-- for scroll space after form only if no checkins -->
+    31:   <% if @checkin.!present? %>
+    32:     <br><br><br>
+    33:   <% end %>  
+    34: <% end %>
+  app/views/checkins/_form.html.erb:31:in `!'
+  app/views/checkins/_form.html.erb:31:in `block in _app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_form.html.erb:1:in `_app_views_checkins__form_html_erb___4259916228373731174_2176924040'
+  app/views/checkins/_show.html.erb:17:in `_app_views_checkins__show_html_erb___4315236905702132195_2177956420'
+  app/views/checkins/show.js.erb:3:in `_app_views_checkins_show_js_erb___1590714278751897238_2178067260'
+  app/controllers/checkins_controller.rb:29:in `show'
+
+
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/nicocrisafulli/.rvm/rubies/ruby-2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.3ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 49.1ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-30 16:13:03 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:13:05 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  Rendered checkins/_form.html.erb (4.2ms)
+  [1m[36mCheckin Load (0.3ms)[0m  [1mSELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 3[0m
+  Rendered checkins/_show.html.erb (9.7ms)
+  Rendered checkins/_form.html.erb (2.5ms)
+  Rendered checkins/_show.html.erb (5.4ms)
+  Rendered checkins/_form.html.erb (3.3ms)
+  Rendered checkins/_show.html.erb (6.9ms)
+  Rendered checkins/show.js.erb (29.3ms)
+Completed 200 OK in 38.4ms (Views: 35.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.2ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 10.3ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-30 16:13:13 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-30 16:13:15 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/checkins/3" for 127.0.0.1 at 2014-05-30 16:13:15 -0700
+Processing by CheckinsController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  Rendered checkins/_form.html.erb (4.6ms)
+  [1m[35mCheckin Load (0.6ms)[0m  SELECT "checkins".* FROM "checkins" WHERE "checkins"."location_id" = 3
+  Rendered checkins/_show.html.erb (10.5ms)
+  Rendered checkins/_form.html.erb (4.2ms)
+  Rendered checkins/_show.html.erb (7.7ms)
+  Rendered checkins/_form.html.erb (2.8ms)
+  Rendered checkins/_show.html.erb (5.1ms)
+  Rendered checkins/show.js.erb (28.4ms)
+Completed 200 OK in 33.0ms (Views: 30.8ms | ActiveRecord: 0.8ms)
