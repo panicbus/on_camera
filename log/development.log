@@ -35204,3 +35204,530 @@ Served asset /route.js - 304 Not Modified (0ms)
 
 Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
 Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.6ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (2ms)  (pid 4825)
+Completed 200 OK in 64.2ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /application.css - 200 OK (24ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:15:39 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:18:59 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.9ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 16.2ms (Views: 12.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:19:00 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:23:19 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (1ms)  (pid 4825)
+Completed 200 OK in 41.4ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /application.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:23:20 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-31 13:23:21 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (1ms)  (pid 4825)
+Completed 200 OK in 27.5ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:23:29 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-31 13:23:30 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (2ms)  (pid 4825)
+Completed 200 OK in 32.4ms (Views: 24.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:35 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-31 13:23:36 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-31 13:23:36 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (0.2ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 4825)
+Completed 200 OK in 28.1ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-31 13:23:49 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv.ico" for 127.0.0.1 at 2014-05-31 13:23:50 -0700
+Served asset /cctv.ico - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:25:42 -0700
+Processing by CheckinsController#index as HTML
+  [1m[35mCheckin Load (0.4ms)[0m  SELECT "checkins".* FROM "checkins" 
+  Rendered checkins/index.html.erb within layouts/application (0.0ms)
+Compiled application.css  (3ms)  (pid 4825)
+Completed 200 OK in 65.0ms (Views: 62.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /application.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:25:43 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)

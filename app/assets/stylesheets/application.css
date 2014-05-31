@@ -493,5 +493,25 @@ body .commentModal {
 		margin-left: 2%;
 	}
 
+}
+
+@media (max-width: 480px) {
+
+	#welcome_title {
+		width: 105%;
+	}
+
+	.welcome_title_top {
+		font-size: 30px;
+	}
+
+	.welcome_title_bottom {
+		font-size: 22px;
+	}
+
+	#welcome p {
+		margin-right: -10px;
+	}
 
 }
+
