@@ -379,6 +379,10 @@ body .commentModal {
 		font-size: 24px;
 	}
 
+	.nav-link {
+		font-size: 15px;
+	}		
+
 	#welcome {
 		position: fixed;
 		margin: 10px 10px 10px 10px;
@@ -496,6 +500,10 @@ body .commentModal {
 }
 
 @media (max-width: 480px) {
+
+	.nav-link {
+		font-size: 14px;
+	}
 
 	#welcome_title {
 		width: 105%;
