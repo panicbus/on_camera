@@ -401,10 +401,10 @@ body .commentModal {
 	}
 
 	.bird_on_it {
-		width: 80px;
+		width: 70px;
 		height: auto;
 		float: left;
-	  margin: 15px 5px 15px 10px;
+	  margin: 15px 1px 15px 5px;
 	  padding-top: 0;
 	}
 
@@ -503,6 +503,7 @@ body .commentModal {
 
 	.welcome_title_top {
 		font-size: 30px;
+		letter-spacing: 7px
 	}
 
 	.welcome_title_bottom {
