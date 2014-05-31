@@ -34969,3 +34969,238 @@ Processing by CheckinsController#show as */*
   Rendered checkins/_show.html.erb (5.1ms)
   Rendered checkins/show.js.erb (28.4ms)
 Completed 200 OK in 33.0ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-30 21:53:59 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[36mCheckin Load (2.6ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  [1m[35mLocation Load (0.3ms)[0m  SELECT "locations".* FROM "locations" 
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  Rendered checkins/all_checkins.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 99.3ms (Views: 78.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-30 21:54:00 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-31 13:06:26 -0700
+Processing by CheckinsController#index as HTML
+  [1m[36mCheckin Load (4.0ms)[0m  [1mSELECT "checkins".* FROM "checkins" [0m
+  Rendered checkins/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 83.1ms (Views: 56.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:06:26 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:26 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:06:27 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/all_checkins" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Processing by CheckinsController#all_checkins as HTML
+  [1m[35mCheckin Load (0.3ms)[0m  SELECT "checkins".* FROM "checkins" 
+  [1m[36mLocation Load (0.4ms)[0m  [1mSELECT "locations".* FROM "locations" [0m
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 3 LIMIT 1
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."id" = 1 LIMIT 1[0m
+  Rendered checkins/all_checkins.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 47.7ms (Views: 43.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/checkins.css?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /checkins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /jquery.iframe-transport.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dropdownNav.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /dropdownNav.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/all_checkins_buttons.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /all_checkins_buttons.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.remotipart.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /jquery.remotipart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkins.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /checkins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.isotope.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /jquery.isotope.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/maps.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /maps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/isotopeCalls.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /isotopeCalls.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/masonry.min.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /masonry.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/route.js?body=1" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /route.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cctv_camera1.png" for 127.0.0.1 at 2014-05-31 13:07:00 -0700
+Served asset /cctv_camera1.png - 304 Not Modified (0ms)
