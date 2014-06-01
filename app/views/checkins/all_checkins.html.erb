@@ -1,6 +1,6 @@
 <div class="allcheckins_container">
     <h1>All the checkins</h1>
-    <h3>Click on the buttons below to filter the results by Camera number</h3>
+    <h3>Click on the buttons below to filter the results by Camera</h3>
     <br>
 
   <div class="allCheckins_filter">
@@ -25,6 +25,7 @@
         <% if checkin.photo.present? %>
           <%= image_tag checkin.photo.url(:medium) %><br>
         <% end %>
+        <span style="font-size:12px">&#149;<%= checkin.created_at.strftime("%b %e, %Y %l:%M %p") %></span>
       </div>
     <%end%>
     
@@ -36,6 +37,7 @@
       	<% if checkin.photo.present? %>
        		<%= image_tag checkin.photo.url(:medium) %><br>
       	<% end %>
+        <span style="font-size:12px">&#149;<%= checkin.created_at.strftime("%b %e, %Y %l:%M %p") %></span>
    		</div>  
     <% end %>
       	
