@@ -28,11 +28,11 @@ var geoJson_features = [
   type: "Feature",
   geometry: {
     type: "Point",
-    coordinates: [-118.23827505111693, 34.04916593685887]
+    coordinates: [-118.34167420864105, 34.10160638993377]
   },
   properties: {
     title: 'Camera 2',
-    description: 'Convention Center',
+    description: 'Hollywood Boulevard',
     icon: {
       "iconUrl": "assets/cctv_marker.png",
       "iconSize": [30, 30], // size of the icon
@@ -72,11 +72,11 @@ var geoJson_features = [
   type: "Feature",
   geometry: {
     type: "Point",
-    coordinates: [-118.34167420864105, 34.10160638993377]
+    coordinates: [-118.23827505111693, 34.04916593685887]
   },
   properties: {
     title: 'Camera 4',
-    description: 'Hollywood Boulevard',
+    description: 'Convention Center',
     icon: {
       "iconUrl": "assets/cctv_marker.png",
       "iconSize": [30, 30], // size of the icon
